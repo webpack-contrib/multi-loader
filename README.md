@@ -16,7 +16,7 @@ var multi = require("multi-loader");
 				// Add CSS to the DOM
 				// and
 				// Return the raw content
-				loaders: multi(
+				loader: multi(
 					"style-loader!css-loader!autoprefixer-loader",
 					"raw-loader"
 				)
