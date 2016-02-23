@@ -2,7 +2,7 @@
 
 This loader requires a module multiple times, each time loaded with a different loader. Like in a multi entry point the exports of the last item are exported.
 
-A normal user probably don't need this loader, but it's useful in combination with other loaders.
+A normal user probably won't need this loader, but it's useful in combination with other loaders.
 
 Example:
 
