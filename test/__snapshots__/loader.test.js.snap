@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Default 1`] = `
+"require(\\"-!css-loader!./test/fixtures/index.css\\");
+module.exports = require(\\"-!raw-loader!./test/fixtures/index.css\\");"
+`;
