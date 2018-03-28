@@ -1,6 +1,13 @@
-var loader = require.resolve("./index.loader.js")
-module.exports = function(items) {
-	if(!Array.isArray(items))
-		items = Array.prototype.slice.call(arguments);
-	return loader + "?" + JSON.stringify(items).replace(/!/g, "\\u0021");
+const loader = require.resolve('./index.loader.js');
+module.exports = function defaultLoader(...args) {
+  const [first] = args;
+  let loaders;
+
+  if (Array.isArray(first)) {
+    loaders = first.slice(0);
+  } else {
+    loaders = Array.prototype.slice.call(...args);
+  }
+
+  return `${loader}?${JSON.stringify(loaders).replace(/!/g, '\\u0021')}`;
 };
